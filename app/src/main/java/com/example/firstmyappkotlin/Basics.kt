@@ -2,8 +2,11 @@ package com.example.firstmyappkotlin
 
 fun main()
 {
-print("Hello world")
+print(multiplicationFunction(9,3))
+
 }
 
-fun hello()
-{}
+fun multiplicationFunction(a: Int , b: Int): Int
+{
+    return a * b
+}
