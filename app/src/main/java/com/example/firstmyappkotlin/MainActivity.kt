@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         val tvMyTextView = findViewById<TextView>(R.id.textView)
         var timesClicked =0
         btnClicMe.setOnClickListener{
-
             timesClicked += 1
             tvMyTextView.text = timesClicked.toString()
             Toast.makeText(this, "WITAJ RBBITV" , Toast.LENGTH_LONG).show()
