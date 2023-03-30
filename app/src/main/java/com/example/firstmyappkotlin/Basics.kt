@@ -1,7 +1,40 @@
 package com.example.firstmyappkotlin
 
+interface Drivable{
+    val maxSpeed: Double
+    fun drive(): String
+    fun brake(){
+        println("The drivable is breaking")
+    }
+}
+
+open class MobilePhone(override val maxSpeed:Double,osName: String, brand: String, model: String) :Drivable{
+    private var battery =30;
+    init {
+        chargeBattery(20)
+        println("The phone   $model from $brand uses $osName as its Operating System")
+    }
+
+    fun chargeBattery(chargedBy: Int){
+        println("Battery was at $battery and is at ${battery+chargedBy} now")
+        battery += chargedBy
+    }
+
+    override fun drive(): String {
+       return "Witaj\n"
+    }
+
+
+
+}
 fun main()
 {
+
+
+    var phone= MobilePhone(20.2,"Android", "Samsung", "S32")
+//    phone.chargeBattery(20)
+//    println(phone)
+
     Person("Robert","Jakubowicz")
     var myName : String  = " Michał";
     var flaost :Float = 23.23F
